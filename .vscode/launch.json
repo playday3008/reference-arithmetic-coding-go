@@ -9,18 +9,20 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${fileDirname}",
+            "program": "./cmd/main.go",
+            "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "args": ["--action", "compress", "--input", "main.exe", "--output", "main", "--overwrite"]
+            "args": ["--action", "compress", "--input", "./LICENSE", "--output", "./LICENSE.ac", "--overwrite"]
         },
         {
             "name": "Launch Package (decompress)",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${fileDirname}",
+            "program": "./cmd/main.go",
+            "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "args": ["--action", "decompress", "--input", "main", "--output", "main2.exe", "--overwrite"]
+            "args": ["--action", "decompress", "--input", "./LICENSE.ac", "--output", "./LICENSE.txt", "--overwrite"]
         }
     ]
 }
